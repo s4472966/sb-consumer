@@ -24,7 +24,7 @@ import ij.ImageJ;
 
 public class MyConsumer {
 	private final static String TOPIC = "my-test-1";
-	private final static String BOOTSTRAP_SERVERS = "localhost:192.168.1.130:9092";
+	private final static String BOOTSTRAP_SERVERS = "192.168.1.130:9092";
 	
 	
 	private static Consumer<Long, String> createConsumer() {
@@ -52,7 +52,7 @@ public class MyConsumer {
         
         
         @SuppressWarnings("resource")
-		Jedis client = new Jedis("192.168.1.130:6379");
+		Jedis client = new Jedis("6379");
 		
         
         while (true) {
